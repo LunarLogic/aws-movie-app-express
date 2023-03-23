@@ -1,0 +1,19 @@
+.movie-row {
+    display: flex;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid gray
+}
+
+.title {
+    width: 60%;
+}
+
+.rating {
+    width: 40%;
+}
+
+.title, .rating {
+    padding: 10px;
+    border: 1px solid gray
+}
