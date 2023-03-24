@@ -1,8 +1,11 @@
+@import "../../styles/colors.scss";
+
 .movie-row {
     display: flex;
-    width: 500px;
+    gap: 20px;
+    width: 100%;
     padding: 10px;
-    border: 1px solid gray
+    box-sizing: border-box;
 }
 
 .title {
@@ -10,14 +13,26 @@
 }
 
 .rating {
-    width: 30%;
+    width: 20%;
 }
 
 .delete-button {
+    background-color: $accent;
+}
+
+.edit-button {
+    background-color: $brown;
+}
+
+.delete-button, .edit-button {
     width: 10%;
+    color: $offwhite;
+    font-weight: 600
 }
 
 .title, .rating {
     padding: 10px;
-    border: 1px solid gray
+    border-radius: 4px;
+    background-color: $background;
+    color: $secondary;
 }

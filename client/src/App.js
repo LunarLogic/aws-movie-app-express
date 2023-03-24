@@ -1,8 +1,12 @@
-import "./App.css";
-import { MoviesTable } from "./components/MoviesTable/MoviesTable";
+import "./App.scss";
+import { MoviesList } from "./components/MoviesList/MoviesList";
 
 function App() {
-  return <MoviesTable />;
+  return (
+    <div className="app">
+      <MoviesList />
+    </div>
+  );
 }
 
 export default App;
