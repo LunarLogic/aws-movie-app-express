@@ -1,4 +1,4 @@
-import { addMovie, getMovies } from "../../api/movies";
+import { addMovie, deleteMovie, getMovies } from "../../api/movies";
 import { Movie } from "../Movie/Movie";
 import { useEffect, useState } from "react";
 import { AddMovieForm } from "../AddMovieForm/AddMovieForm";
@@ -17,6 +17,11 @@ export const MoviesTable = () => {
     await fetchMovies();
   };
 
+  const handleDeleteMovie = async (id) => {
+    await deleteMovie(id);
+    await fetchMovies();
+  };
+
   useEffect(() => {
     fetchMovies();
   }, []);
@@ -24,7 +29,12 @@ export const MoviesTable = () => {
     <div>
       {movies.length ? (
         movies.map((movie) => (
-          <Movie key={movie.id} title={movie.title} rating={movie.rating} />
+          <Movie
+            key={movie.id}
+            title={movie.title}
+            rating={movie.rating}
+            onDelete={() => handleDeleteMovie(movie.id)}
+          />
         ))
       ) : (
         <div>No movies yet</div>

@@ -13,3 +13,10 @@ export const addMovie = async (title, rating) => {
     .then((response) => response.data.data)
     .catch((e) => console.log(e));
 };
+
+export const deleteMovie = async (id) => {
+  return await apiClient
+    .delete(`/movies/${id}`)
+    .then((response) => response.data)
+    .catch((e) => console.log(e));
+};
