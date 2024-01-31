@@ -9,6 +9,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-
 RUN npx prisma generate
-CMD [ "npm", "run", "dev" ]
+# based on https://notiz.dev/blog/prisma-migrate-deploy-with-docker
+CMD [  "npm", "run", "start:migrate:prod" ]
