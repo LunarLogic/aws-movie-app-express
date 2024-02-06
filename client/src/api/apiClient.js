@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "http://localhost:3001/api";
+const apiUrl = "http://aws-movie-app-express.lunarlogic.io/api";
 
 export const apiClient = axios.create({
   baseURL: apiUrl,
