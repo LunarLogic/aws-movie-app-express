@@ -20,7 +20,7 @@ export default merge(
     port: 3000,
     secrets: {
       jwt: process.env.JWT_SECRET,
-      dbUrl: "postgresql://aws_movie_app_user:test1234@staging-db.cdoobi4js1mb.eu-west-1.rds.amazonaws.com:5432/aws_movie_app_db",
+      dbUrl: process.env.DATABASE_URL,
     },
   },
   envConfig

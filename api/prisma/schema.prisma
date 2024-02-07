@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://aws_movie_app_user:test1234@staging-db.cdoobi4js1mb.eu-west-1.rds.amazonaws.com:5432/aws_movie_app_db"
+  url      = env("DATABASE_URL")
 }
 
 model Movie {
