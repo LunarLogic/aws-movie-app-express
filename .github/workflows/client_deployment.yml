@@ -2,12 +2,12 @@ on: workflow_call
 
 env:
   AWS_REGION: eu-west-1
-  ECS_CLUSTER: lunarlogic_main_ecs_cluster
+  ECS_CLUSTER: lunarlogic_staging_ecs_cluster
   CONTAINER_NAME: app
   GITHUB_ROLE_ARN: arn:aws:iam::806227494574:role/aws-movie-app-express-gh-oidc-role
 
-  ECR_REPOSITORY: aws-movie-app-express-client
-  ECS_SERVICE: aws-movie-app-express-client
+  ECR_REPOSITORY: estimation-staging
+  ECS_SERVICE: estimation-staging
   ECS_TASK_DEFINITION: .aws/task-definition-client.json
 
 jobs:
